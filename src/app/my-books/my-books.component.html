@@ -1,0 +1,21 @@
+<app-navbar></app-navbar>
+
+<div class="user-cards-container">
+  <p>Username: {{user.username}}</p>
+  <p>Email: {{user.email}}</p>
+</div>
+
+<div class="books-cards-container">
+  <h1>Your Books</h1>
+
+  <div class="card-deck">
+    <div *ngFor="let book of user.books" class="card">
+      <img class="card-img-top" [src]="book.image" alt="{{book.title}}">
+      <div class="card-body">
+        <h5 class="card-title">{{book.title}}</h5>
+        <p class="card-text">{{book.summary}}</p>
+        <p class="card-text"><small class="text-muted">{{book.year}}</small></p>
+      </div>
+    </div>
+  </div>
+</div>

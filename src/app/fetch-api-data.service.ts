@@ -171,14 +171,15 @@ export class FetchDataService  {
   addReadList(bookId: string): Observable<any> {
     const token = localStorage.getItem("token");
     const username = localStorage.getItem('user');
-    return this.http.post(`${apiUrl}users/${username}/books/${bookId}`, bookId, {
-      headers: new HttpHeaders({
+    return this.http.post(`${apiUrl}users/${username}/favorites/${bookId}`, {}, {
+      headers: new HttpHeaders ({
         Authorization: "Bearer " + token
-        })
-      }).pipe(
-        catchError(this.handleError)
-      );
+      })
+    }).pipe(
+      catchError(this.handleError)
+    )
   }
+
 
   /**
    * Remove book from read list

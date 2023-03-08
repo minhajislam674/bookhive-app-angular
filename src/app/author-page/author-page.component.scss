@@ -1,0 +1,29 @@
+.dialog-content-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 24px;
+  }
+  
+  .image-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-right: 24px;
+  }
+  
+  .image-container img {
+    max-width: 200px;
+    max-height: 200px;
+    object-fit: contain;
+  }
+  
+  .description-container {
+    text-align: left;
+  }
+  
+  p {
+    font-size: 11px;
+    color: #333;
+    margin-bottom: 24px;
+  }
