@@ -46,7 +46,6 @@ export class BookCardComponent {
 
 
 
-
   openAuthorDialog(name: string, bio: string, image: any): void {
     this.dialog.open(AuthorPageComponent, {
       data: 

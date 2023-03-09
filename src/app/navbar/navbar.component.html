@@ -1,26 +1,19 @@
-<div class="navbar">
-    <a 
-        class="navbar-logo"
-        (click) = 'routeToBooksView()'
-    >
-        BookHive
-    </a>
 
+
+<div class="navbar">
+    <a class="navbar-logo" (click)="routeToBooksView()">
+      <mat-icon>menu_book</mat-icon> BookHive
+    </a>
+  
     <div class="navbar-menu">
-        <a
-            (click) = 'routeToBooksView()' 
-        >
-            Home
-        </a>
-        <a
-            (click) = 'routeToMyBooksView()'
-        >
-            My Books
-        </a>
-        <a
-            (click) = 'logout()' 
-        >
-            Logout
-        </a>
+      <a (click)="routeToBooksView()">
+        Home
+      </a>
+      <a (click)="routeToMyBooksView()">
+        My Books
+      </a>
+      <a (click)="logout()">
+        <mat-icon>exit_to_app</mat-icon> Logout
+      </a>
     </div>
   </div>

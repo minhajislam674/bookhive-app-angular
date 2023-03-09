@@ -192,7 +192,7 @@ export class FetchDataService  {
   removeReadList(bookId:any) : Observable<any> {
     const token = localStorage.getItem("token");
     const username = localStorage.getItem('user');
-    return this.http.delete(`${apiUrl}users/${username}/books/${bookId}`, {
+    return this.http.delete(`${apiUrl}users/${username}/favorites/${bookId}`, {
       headers: new HttpHeaders ({
         Authorization: "Bearer " + token
       })

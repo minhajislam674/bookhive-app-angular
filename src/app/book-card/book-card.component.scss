@@ -3,8 +3,6 @@
     flex-wrap: wrap;
     justify-content: center;
     box-sizing: border-box;
-    background-color: rgb(250, 250, 234);
-    margin-top: 20px;
   }
   
   .card-element {
@@ -26,15 +24,9 @@
     width: 100%; /* make the image take up the full width of its container */
     object-fit: cover; /* make sure the image fills the entire container, even if it has to be cropped */
   }
-  
-  .favorite-btn-add:hover {
-    color: #ff0000;
-    cursor: pointer;
-  }
-  
-  .favorite-btn-remove:hover {
-    color: #ff0000;
-    cursor: pointer;
+
+  button {
+    font-family: 'Lora', 'Roboto', sans-serif;
   }
 
   .genre-text {

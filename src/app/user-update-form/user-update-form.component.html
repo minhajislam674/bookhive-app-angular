@@ -1,0 +1,38 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title style="margin-bottom: 15px;">Update Information</mat-card-title>
+        <button mat-icon-button mat-dialog-close class="close-icon" aria-label="Close">
+            <mat-icon>close</mat-icon>
+          </button>
+    </mat-card-header>
+    <mat-card-content>
+        <form>
+            <mat-form-field appearance="outline">
+              <mat-label>Username</mat-label>
+              <input 
+              matInput 
+              [(ngModel)]="updatedUser.username"
+              type="text"
+              name="Username" 
+              required
+              pattern="^(?=.*[a-zA-Z]).{3,}$"
+              #usernameInput="ngModel"
+            >
+            <mat-error *ngIf="usernameInput.invalid">
+            Username must be at least 3 characters long and contain at least one letter.
+            </mat-error>
+            </mat-form-field>
+          </form>
+          <mat-card-actions>
+            <button
+              mat-raised-button
+              color="primary"
+              type="submit"
+              (click)="updateUser()"
+              [disabled]="!usernameInput.valid"
+            >
+              Update
+            </button>
+          </mat-card-actions>
+    </mat-card-content>
+</mat-card>

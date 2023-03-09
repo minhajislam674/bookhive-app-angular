@@ -22,6 +22,7 @@ import { DescriptionPageComponent } from './description-page/description-page.co
 import { AuthorPageComponent } from './author-page/author-page.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MyBooksComponent } from './my-books/my-books.component';
+import { UserUpdateFormComponent } from './user-update-form/user-update-form.component';
 
 const appRoutes: Routes = [
   { path: 'welcome', component: WelcomePageComponent },
@@ -40,7 +41,8 @@ const appRoutes: Routes = [
     DescriptionPageComponent,
     AuthorPageComponent,
     NavbarComponent,
-    MyBooksComponent
+    MyBooksComponent,
+    UserUpdateFormComponent
   ],
   imports: [
     BrowserModule,

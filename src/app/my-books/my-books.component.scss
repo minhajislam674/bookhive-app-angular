@@ -1,0 +1,158 @@
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* display 4 cards per row on large screens */
+    grid-gap: 20px;
+    justify-content: center;
+    box-sizing: border-box;
+    margin: 2rem;
+  }
+  
+  .card-element {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    background-color: #fdfdfb;
+  }
+  
+  .mat-card-image-container {
+    flex: 1 1 auto; /* set the image container to take up all available space */
+  }
+  
+  .mat-card-image {
+    height: 300px; /* make the image take up the full height of its container */
+    width: 100%; /* make the image take up the full width of its container */
+    object-fit: cover; /* make sure the image fills the entire container, even if it has to be cropped */
+  }
+
+  .card-title{
+    font-size: 16px;
+    font-weight: bold;
+    color: #505050;
+  }
+  
+  .favorite-btn-add:hover {
+    color: #ff0000;
+    cursor: pointer;
+  }
+  
+  .favorite-btn-remove:hover {
+    color: #ff0000;
+    cursor: pointer;
+  }
+
+  .bookshelf-heading {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #505050;
+    margin-top: 50px;
+  }
+
+  .genre-text {
+    font-size: 10px;
+    color: #808080;
+    font-weight: 500;
+    margin-right: 10px;
+    color: #505050;
+  }
+
+
+  mat-card-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #505050;
+    margin-bottom: 16px;
+  }
+
+  .user-card {
+    max-width: 500px;
+    margin: 0 auto;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    padding: 16px;
+    background-color: #fff;
+    margin-top: 20px;
+  }
+  
+  .user-details {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .avatar-container {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 16px;
+    background-color: #f2f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .avatar {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .user-cards-container {
+    display: flex;
+    flex-direction: column;
+    
+  }
+  
+  .user-cards-container h2 {
+    margin: 0 0 4px;
+    font-size: 24px;
+    font-weight: 500;
+    color: #505050;
+  }
+  
+  .user-cards-container p {
+    margin: 0;
+    font-size: 16px;
+    color: #757575;
+  }
+  
+  .edit-button {
+    margin-right: 15px;
+    background-color: #EB9580;
+  }
+
+  
+  button {
+    font-family: 'Lora', 'Roboto', sans-serif;
+  }
+
+
+  
+  
+
+
+
+    @media (max-width: 1200px) {
+        .cards-container {
+        grid-template-columns: repeat(4, 1fr); /* display five cards per row */
+        }
+    }
+
+    @media (max-width: 992px) {
+        .cards-container {
+        grid-template-columns: repeat(3, 1fr); /* display three cards per row */
+        }
+    }
+
+    @media (max-width: 768px) {
+        .cards-container {
+        grid-template-columns: repeat(2, 1fr); /* display two cards per row */
+        }
+    }
+
+    @media (max-width: 576px) {
+        .cards-container {
+        grid-template-columns: repeat(1, 1fr); /* display one card per row */
+        }
+    }
+

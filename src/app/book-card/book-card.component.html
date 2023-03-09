@@ -18,21 +18,21 @@
         <mat-card-actions>
             <button
                 mat-button
-                color="primary"
+                style="color:#A0B185;"
                 (click) = 'openAuthorDialog(book.authors[0].name, book.authors[0].bio, book.authors[0].image )'
             >
                 Author
             </button>
             <button
                 mat-button
-                color="primary"
+                style="color:#A0B185; "
                 (click) = 'openDescriptionDialog(book.title, book.summary, book.pages, book.year)'
             >
                 Description
             </button>
-
-            <mat-icon (click)="addToReadList(book.id)">add_circle_outline</mat-icon> 
-
         </mat-card-actions>
+        <button mat-raised-button style="background-color: #A0B185; color:white; margin: 15px 15px;" (click)="addToReadList(book.id)">
+            <mat-icon>add_circle_outline</mat-icon> Want to Read
+        </button>
     </mat-card>
 </div>

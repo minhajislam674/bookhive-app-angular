@@ -1,0 +1,82 @@
+.main-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Lora', 'Roboto', sans-serif;
+    color: #333;
+    background-image: url("../../../assets/books.jpg");
+  }
+  
+  .card {
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  h1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: whitesmoke;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    font-family: 'Lora', 'Roboto', sans-serif;
+    background-color: #737e61 !important  ;
+    color: whitesmoke  !important ;
+    margin: 15px;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #a0b185 ;
+    color: whitesmoke;
+  }
+  
+  @media (max-width: 768px) {
+    .card {
+      max-width: 400px;
+    }
+    
+    h1 {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+  
+    button {
+      font-size: 18px;
+      padding: 10px 20px;
+      margin: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .card {
+      max-width: 300px;
+    }
+    
+    h1 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+  
+    button {
+        font-size: 18px;
+        padding: 10px 20px;
+        margin: 10px;
+    }
+  }
+  

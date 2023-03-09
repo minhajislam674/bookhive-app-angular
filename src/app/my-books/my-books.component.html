@@ -1,21 +1,43 @@
 <app-navbar></app-navbar>
 
-<div class="user-cards-container">
-  <p>Username: {{user.username}}</p>
-  <p>Email: {{user.email}}</p>
-</div>
-
-<div class="books-cards-container">
-  <h1>Your Books</h1>
-
-  <div class="card-deck">
-    <div *ngFor="let book of user.books" class="card">
-      <img class="card-img-top" [src]="book.image" alt="{{book.title}}">
-      <div class="card-body">
-        <h5 class="card-title">{{book.title}}</h5>
-        <p class="card-text">{{book.summary}}</p>
-        <p class="card-text"><small class="text-muted">{{book.year}}</small></p>
+<mat-card class="user-card">
+  <mat-card-title>Your Profile</mat-card-title>
+  <mat-card-content>
+    <div class="user-details">
+      <div class="avatar-container">
+        <img src="https://robohash.org/set_set4/bgset_bg4.14159?size=200x200" alt="Profile Picture" class="avatar">
+      </div>
+      <div class="user-cards-container">
+        <h2>{{user.username}}</h2>
+        <p>{{user.email}}</p>
       </div>
     </div>
-  </div>
+    <button mat-raised-button style="background-color: #5AB2F5; color: white" class="edit-button" (click)="openUpdateUserDialog()">
+      <mat-icon>edit</mat-icon> Edit Profile
+    </button>
+    <button style="margin-left: 1.2rem;" mat-raised-button style="background-color: #e67f66;color: white;"(click)="deleteProfile()" >
+      <mat-icon>delete</mat-icon> Delete Profile
+    </button>
+    
+  </mat-card-content>
+</mat-card>
+
+<h2 class="bookshelf-heading">Your Bookshelf</h2>
+<div class="cards-container">
+  <mat-card *ngFor="let book of user.books;" class="card-element">
+      <div class="mat-card-image-container">
+          <img class="mat-card-image" src={{book.image}} alt= {{book.title}}  />
+      </div>
+      <mat-card-header>
+          <mat-card-title class="card-title">{{book.title}} ({{(book.year)}})</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <!-- this button will remove book from read list -->
+        <mat-card-actions>
+          <button mat-raised-button color="secondary" (click)="removeFromReadList(book.id)">
+            <mat-icon>delete</mat-icon> Remove
+          </button>
+        </mat-card-actions>
+      </mat-card-content>
+  </mat-card>
 </div>
