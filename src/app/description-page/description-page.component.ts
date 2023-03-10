@@ -21,4 +21,6 @@ export class DescriptionPageComponent {
   ngOnInit(): void {
   }
 
+  
+
 }
