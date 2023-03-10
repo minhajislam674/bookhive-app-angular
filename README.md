@@ -1,34 +1,48 @@
-# OscarFlicks - Angular App
+# BookHive - Angular App
 
-> Welcome to OscarFlicks, a minimal client-side single page application (SPA) that allows users to browse Academy Award winning films. The app is built on top of existing server-side code, including a REST API and database.
+> Welcome to BookHive, a minimal client-side single page application (SPA) that offers a platform for users to browse and manage their reading list. The app is developed on top of server-side code and incorporates a REST API and a PostgreSQL database.
 
-Live Demo: https://minhajislam674.github.io/myflix-angular/
+Live Demo: https://bookhive.netlify.app/
 
-Repository for server-side code: https://github.com/minhajislam674/movie-api
+Repository for server-side code: https://github.com/minhajislam674/dev-books-api
 
 <img
-  src="src/assets/Screenshot_movie-view.jpeg"
+  src="/assets/bookhive-demo.jpeg"
   alt="BookHive"
   title="BookHive"
   style="display: inline-block; width: 650px">
 
-## Features
+## Current Features
 
-With OscarFlicks, you can easily search and filter through a wide range of Academy Award winning films, view detailed information about each film, and even sign up to be able to add films to your watchlist.
+- Sign up and log in: users can create an account and log in to add books they want to read to their bookshelves.
+- Browse books and see genre, author and other description of each books.
+
+## Upcoming Features
+
+- Keep track of reading progress: users can mark books as "currently reading", and "finished".
+- Note-taking functionality to capture and organize personal thoughts and insights for each book that the user is currently engaged with.
 
 ## Built with
+
+### Frontend
 
 - Angular
 - TypeScript
 - Angular-Material
-- TypeDoc
+
+### Backend
+
+- Node
+- Express
+- Prisma
+- PostgreSQL (Managed by Raleway)
 
 ## Getting Started
 
 1. Clone the project
 2. Install Angular CLI
-3. Run `ng serve` for a dev server.
-4. Navigate to `http://localhost:4200/`
+3. Run `ng serve --port 8080` for a dev server.
+4. Navigate to `http://localhost:8080/`
 
 ## Contributing
 
